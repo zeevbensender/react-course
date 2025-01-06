@@ -1,10 +1,11 @@
 function MyGoal(){
     return(
         <div>
-            <p class="centered-text">
-            
-            My main goal: Learn react from the ground up
+            <center>
+            <p>
+                My main goal: Learn react from the ground up
             </p>
+            </center>
         </div>
     );
 }
