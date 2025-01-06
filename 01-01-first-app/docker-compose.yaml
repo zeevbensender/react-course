@@ -1,0 +1,11 @@
+services:
+  npm-service:
+    image: npm-course-image
+    build: .
+    container_name: 01-01-npm
+    ports:
+      - "8081:53682"
+    volumes:
+      - ./01-starting-project:/src
+    entrypoint: "tail"
+    command: ["-f", "/dev/null"]
