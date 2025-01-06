@@ -1,4 +1,5 @@
 import MyGoal from "./MyGoal";
+import atomImage from "./assets/react-core-concepts.png"
 const reactDescriptions = ["Core", "Crucial", "Fundamental"];
 
 function getRandomInt(max){
@@ -8,7 +9,7 @@ function Header() {
   const description = reactDescriptions[getRandomInt(2)]
   return (
     <header>
-    <img src="src/assets/react-core-concepts.png" alt="Stylized atom" />
+    <img src={atomImage} alt="Stylized atom" />
     <h1>React Essentials</h1>
     <h2>Hello React Header!!!</h2>
     <p>
