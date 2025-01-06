@@ -1,0 +1,11 @@
+services:
+  npm-service:
+    image: npm-course-03-06
+    build: .
+    container_name: 03-06-npm
+    ports:
+      - "8081:53682"
+    volumes:
+      - ./06-alternative-props-syntax/:/src
+    entrypoint: "tail"
+    command: ["-f", "/dev/null"]
