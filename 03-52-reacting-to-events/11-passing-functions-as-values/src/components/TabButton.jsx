@@ -1,8 +1,8 @@
-export default function TabButton({ children, onMouse }) {
+export default function TabButton({ children, onSelect }) {
   console.log('TABBUTTON COMPONENT EXECUTING');
   return (
     <li>
-      <button onClick={onMouse}>{children}</button>
+      <button onClick={onSelect}>{children}</button>
     </li>
   );
 }

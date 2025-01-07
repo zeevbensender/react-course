@@ -5,8 +5,6 @@ import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
-  useState();
-  // let tabContent = 'Please click a button';
   const [selectedTopic, setSelectedTopic] = useState();
   function handleClick(lbl) {
     setSelectedTopic(lbl);
@@ -20,10 +18,12 @@ function App() {
         <h3>{EXAMPLES[selectedTopic].title}</h3>
         <p>{EXAMPLES[selectedTopic].description}</p>
         <pre>
-        {EXAMPLES[selectedTopic].code}
+          <code>
+            {EXAMPLES[selectedTopic].code}
+          </code>
         </pre>
       </div>
-    )
+    );
   }
   return (
     <div>
@@ -45,11 +45,14 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onMouse={() => handleClick('JSX')}>JSX</TabButton>
-            <TabButton onMouse={() => handleClick('Props')}>Props</TabButton>
-            <TabButton onMouse={() => handleClick('State')}>State</TabButton>
+            <TabButton onSelect={() => handleClick('components')}>
+              Components
+            </TabButton>
+            <TabButton onSelect={() => handleClick('jsx')}>JSX</TabButton>
+            <TabButton onSelect={() => handleClick('props')}>Props</TabButton>
+            <TabButton onSelect={() => handleClick('state')}>State</TabButton>
           </menu>
-          {selectedTopic}
+          {tabContent}
         </section>
       </main>
     </div>
